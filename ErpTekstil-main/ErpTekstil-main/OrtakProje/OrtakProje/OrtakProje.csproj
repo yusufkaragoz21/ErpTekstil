@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{773CDA5B-5073-4185-84C9-A6FC6ED556A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrtakProje</RootNamespace>
+    <AssemblyName>OrtakProje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClasses\myDataAdapter.cs" />
+    <Compile Include="BaseForm\frmBaseTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseTanim.Designer.cs">
+      <DependentUpon>frmBaseTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\stokHareketClass.cs" />
+    <Compile Include="Forms\FormBaseTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBaseTanim.Designer.cs">
+      <DependentUpon>FormBaseTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBirimTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBirimTanim.Designer.cs">
+      <DependentUpon>frmBirimTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDepoTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDepoTanim.Designer.cs">
+      <DependentUpon>frmDepoTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFirmaTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFirmaTanim.Designer.cs">
+      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRenkTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRenkTanim.Designer.cs">
+      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStokTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStokTanim.Designer.cs">
+      <DependentUpon>frmStokTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helper\helperClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseForm\frmBaseTanim.resx">
+      <DependentUpon>frmBaseTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBaseTanim.resx">
+      <DependentUpon>FormBaseTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBirimTanim.resx">
+      <DependentUpon>frmBirimTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFirmaTanim.resx">
+      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRenkTanim.resx">
+      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStokTanim.resx">
+      <DependentUpon>frmStokTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tanimlar\Classes\" />
+    <Folder Include="Tanimlar\Forms\" />
+    <Folder Include="Tanimlar\Interface\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
