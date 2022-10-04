@@ -11,7 +11,6 @@ namespace Connection
 {
     public class connection
     {
-
         SqlConnection connect = null;
         public SqlConnection Conobjcet
         {
@@ -31,8 +30,10 @@ namespace Connection
         }
         public void Close()
         {
-            connect.Close();
+            if (connect != null)
+            {
+                connect.Close();
+            }            
         }
-
     }
 }

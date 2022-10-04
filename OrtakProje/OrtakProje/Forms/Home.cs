@@ -30,6 +30,7 @@ namespace OrtakProje
         private void mnStokTanim_Click(object sender, EventArgs e)
         {
             //acik olan sayfanin tekrar acilmasini engelledik
+            //sadf
             if (frmstoktanim == null || frmstoktanim.IsDisposed)
             {
                 frmstoktanim = new frmStokTanim();
