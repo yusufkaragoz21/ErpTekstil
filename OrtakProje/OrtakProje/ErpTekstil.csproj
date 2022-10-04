@@ -50,48 +50,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\myDataAdapter.cs" />
-    <Compile Include="BaseForm\frmBaseTanim.cs">
+    <Compile Include="BaseForm\FormBaseTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm\frmBaseTanim.Designer.cs">
-      <DependentUpon>frmBaseTanim.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\stokHareketClass.cs" />
-    <Compile Include="Forms\FormBaseTanim.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormBaseTanim.Designer.cs">
+    <Compile Include="BaseForm\FormBaseTanim.Designer.cs">
       <DependentUpon>FormBaseTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmBirimTanim.cs">
+    <Compile Include="Classes\stokHareketClass.cs" />
+    <Compile Include="Forms\FormBirimTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmBirimTanim.Designer.cs">
-      <DependentUpon>frmBirimTanim.cs</DependentUpon>
+    <Compile Include="Forms\FormBirimTanim.Designer.cs">
+      <DependentUpon>FormBirimTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmDepoTanim.cs">
+    <Compile Include="Forms\FormDepoTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmDepoTanim.Designer.cs">
-      <DependentUpon>frmDepoTanim.cs</DependentUpon>
+    <Compile Include="Forms\FormDepoTanim.Designer.cs">
+      <DependentUpon>FormDepoTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmFirmaTanim.cs">
+    <Compile Include="Forms\FormFirmaTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmFirmaTanim.Designer.cs">
-      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    <Compile Include="Forms\FormFirmaTanim.Designer.cs">
+      <DependentUpon>FormFirmaTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmRenkTanim.cs">
+    <Compile Include="Forms\FormRenkTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmRenkTanim.Designer.cs">
-      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    <Compile Include="Forms\FormRenkTanim.Designer.cs">
+      <DependentUpon>FormRenkTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmStokTanim.cs">
+    <Compile Include="Forms\FormStokTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmStokTanim.Designer.cs">
-      <DependentUpon>frmStokTanim.cs</DependentUpon>
+    <Compile Include="Forms\FormStokTanim.Designer.cs">
+      <DependentUpon>FormStokTanim.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -102,23 +96,20 @@
     <Compile Include="helper\helperClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaseForm\frmBaseTanim.resx">
-      <DependentUpon>frmBaseTanim.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormBaseTanim.resx">
+    <EmbeddedResource Include="BaseForm\FormBaseTanim.resx">
       <DependentUpon>FormBaseTanim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmBirimTanim.resx">
-      <DependentUpon>frmBirimTanim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormBirimTanim.resx">
+      <DependentUpon>FormBirimTanim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmFirmaTanim.resx">
-      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormFirmaTanim.resx">
+      <DependentUpon>FormFirmaTanim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmRenkTanim.resx">
-      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormRenkTanim.resx">
+      <DependentUpon>FormRenkTanim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmStokTanim.resx">
-      <DependentUpon>frmStokTanim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormStokTanim.resx">
+      <DependentUpon>FormStokTanim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

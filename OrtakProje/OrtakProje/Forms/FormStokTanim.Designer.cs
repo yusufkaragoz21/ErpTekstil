@@ -1,6 +1,6 @@
 ﻿namespace OrtakProje.Forms
 {
-    partial class frmStokTanim
+    partial class FormStokTanim
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xdt)).BeginInit();
             this.SuspendLayout();
             // 
             // frmStokTanim
@@ -39,7 +39,7 @@
             this.Name = "frmStokTanim";
             this.Text = "frmStokTanim";
             this.Load += new System.EventHandler(this.frmStokTanim_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xdt)).EndInit();
             this.ResumeLayout(false);
 
         }

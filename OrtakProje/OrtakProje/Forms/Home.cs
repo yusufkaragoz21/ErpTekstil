@@ -25,59 +25,59 @@ namespace OrtakProje
         }
 
 
-        frmStokTanim frmstoktanim;
+        FormStokTanim frmstoktanim;
         private void mnStokTanim_Click(object sender, EventArgs e)
         {
             //acik olan sayfanin tekrar acilmasini engelledik
             //sadf
             if (frmstoktanim == null || frmstoktanim.IsDisposed)
             {
-                frmstoktanim = new frmStokTanim();
+                frmstoktanim = new FormStokTanim();
                 frmstoktanim.MdiParent = this;
                 frmstoktanim.WindowState = FormWindowState.Maximized;
                 frmstoktanim.Show();
             }
         }
 
-        frmRenkTanim frmrenktanim;
+        FormRenkTanim frmrenktanim;
         private void mnRenkTanim_Click(object sender, EventArgs e)
         {
             if (frmrenktanim == null || frmrenktanim.IsDisposed)
             {
-                frmrenktanim = new frmRenkTanim();
+                frmrenktanim = new FormRenkTanim();
                 frmrenktanim.MdiParent = this;
                 frmrenktanim.WindowState = FormWindowState.Maximized;
                 frmrenktanim.Show();
             }
         }
-        frmBirimTanim frmbirimtanim;
+        FormBirimTanim frmbirimtanim;
         private void mnBirimTanim_Click(object sender, EventArgs e)
         {
             if (frmbirimtanim == null || frmbirimtanim.IsDisposed)
             {
-                frmbirimtanim = new frmBirimTanim();
+                frmbirimtanim = new FormBirimTanim();
                 frmbirimtanim.MdiParent = this;
                 frmbirimtanim.WindowState = FormWindowState.Maximized;
                 frmbirimtanim.Show();
             }
         }
-        frmFirmaTanim frmfirmatanim;
+        FormFirmaTanim frmfirmatanim;
         private void mnFirmaTanim_Click(object sender, EventArgs e)
         {
             if (frmfirmatanim == null || frmfirmatanim.IsDisposed)
             {
-                frmfirmatanim = new frmFirmaTanim();
+                frmfirmatanim = new FormFirmaTanim();
                 frmfirmatanim.MdiParent = this;
                 frmfirmatanim.WindowState = FormWindowState.Maximized;
                 frmfirmatanim.Show();
             }
         }
-        frmDepoTanim frmdepotanim;
+        FormDepoTanim frmdepotanim;
         private void mnDepoTanim_Click(object sender, EventArgs e)
         {
             if (frmdepotanim == null || frmdepotanim.IsDisposed)
             {
-                frmdepotanim = new frmDepoTanim();
+                frmdepotanim = new FormDepoTanim();
                 frmdepotanim.MdiParent = this;
                 frmdepotanim.WindowState = FormWindowState.Maximized;
                 frmdepotanim.Show();

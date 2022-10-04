@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace OrtakProje.Forms
 {
-    public partial class frmDepoTanim : BaseForm.frmBaseTanim
+    public partial class FormDepoTanim : BaseForm.FormBaseTanim
     {
       
 
@@ -23,13 +23,12 @@ namespace OrtakProje.Forms
         #endregion
 
         #region Constructor
-        public frmDepoTanim()
+        public FormDepoTanim()
         {
-
             grdList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            XdtMain.Columns.Add(new DataColumn("xref", typeof(int)));
-            XdtMain.Columns.Add(new DataColumn("kod", typeof(string)));
-            XdtMain.Columns.Add(new DataColumn("aciklama", typeof(string)));
+            xdt.Columns.Add(new DataColumn("xref", typeof(int)));
+            xdt.Columns.Add(new DataColumn("kod", typeof(string)));
+            xdt.Columns.Add(new DataColumn("aciklama", typeof(string)));
             InitializeComponent();
         }
         #endregion
@@ -47,14 +46,14 @@ namespace OrtakProje.Forms
             cmm.CommandText = "select a.xref, a.kod, a.aciklama from depotanim a ";
             da = new myDataAdapter();
             da.SelectCommand = cmm;
-            da.Fill(XdtMain);
+            da.Fill(xdt);
             da.CreateCommand();
             con.Close();
             base.LoadData();
         }
         protected override void ControlConfigure()
         {
-            grdList.DataSource = XdtMain;
+            grdList.DataSource = xdt;
             grdList.Columns[0].HeaderText = "XREF";
             grdList.Columns[0].Visible = false;
             grdList.Columns[1].HeaderText = "KOD";
@@ -63,7 +62,7 @@ namespace OrtakProje.Forms
         }
         protected override bool Validate()
         {
-            foreach (DataRow r in XdtMain.Select("", "", DataViewRowState.CurrentRows))
+            foreach (DataRow r in xdt.Select("", "", DataViewRowState.CurrentRows))
             {
                 if (helperClass.GetString(r, "kod", "").Trim() == "")
                 {
@@ -80,7 +79,7 @@ namespace OrtakProje.Forms
             SqlTransaction trans = con.BeginTransaction();
             try
             {
-                da.Update(XdtMain, trans);
+                da.Update(xdt, trans);
                 trans.Commit();
             }
             catch (Exception ex)

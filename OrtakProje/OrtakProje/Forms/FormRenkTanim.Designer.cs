@@ -1,6 +1,6 @@
 ﻿namespace OrtakProje.Forms
 {
-    partial class frmBirimTanim
+    partial class FormRenkTanim
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // frmBirimTanim
+            // frmRenkTanim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmBirimTanim";
-            this.Text = "frmBirimTanim";
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).EndInit();
+            this.Name = "frmRenkTanim";
+            this.Text = "frmRenkTanim";
+            this.Load += new System.EventHandler(this.frmRenkTanim_Load);
             this.ResumeLayout(false);
 
         }

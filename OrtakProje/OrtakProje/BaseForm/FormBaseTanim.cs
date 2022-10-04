@@ -10,25 +10,20 @@ using System.Windows.Forms;
 
 namespace OrtakProje.BaseForm
 {
-    public partial class frmBaseTanim : Form
+    public partial class FormBaseTanim : Form
     {
 
 
         #region Objects
-        protected DataTable XdtMain = new DataTable();
+        protected DataTable xdt = new DataTable();
         #endregion
 
         #region Constructor
-        public frmBaseTanim()
+        public FormBaseTanim()
         {
             InitializeComponent();
         }
         #endregion
-
-        #region Properties
-        #endregion
-
-       
 
         #region Private Methods
         protected virtual void LoadData()
@@ -52,8 +47,8 @@ namespace OrtakProje.BaseForm
         #region Events
         private void frmBaseTanim_Load(object sender, EventArgs e)
         {
-            XdtMain.RowChanging += XdtMain_RowChanging;
-            XdtMain.RowChanged += XdtMain_RowChanged;
+            xdt.RowChanging += XdtMain_RowChanging;
+            xdt.RowChanged += XdtMain_RowChanged;
             ControlConfigure();
                 LoadData();
 

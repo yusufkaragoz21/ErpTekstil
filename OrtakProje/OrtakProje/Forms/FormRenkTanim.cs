@@ -13,26 +13,22 @@ using System.Windows.Forms;
 
 namespace OrtakProje.Forms
 {
-    public partial class frmFirmaTanim : BaseForm.frmBaseTanim
+    public partial class FormRenkTanim : BaseForm.FormBaseTanim
     {
         #region Objects
-        //SqlDataAdapter da = null;
         SqlConnection con = null;
         myDataAdapter da = null;
         #endregion
 
         #region Constructor
-        public frmFirmaTanim()
+        public FormRenkTanim()
         {
             grdList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            XdtMain.Columns.Add(new DataColumn("xref", typeof(int)));
-            XdtMain.Columns.Add(new DataColumn("kod", typeof(string)));
-            XdtMain.Columns.Add(new DataColumn("aciklama", typeof(string)));
+            xdt.Columns.Add(new DataColumn("xref", typeof(int)));
+            xdt.Columns.Add(new DataColumn("kod", typeof(string)));
+            xdt.Columns.Add(new DataColumn("aciklama", typeof(string)));
             InitializeComponent();
         }
-        #endregion
-
-        #region Properties
         #endregion
 
         #region Overridden
@@ -43,17 +39,18 @@ namespace OrtakProje.Forms
             con.Open();
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = con;
-            cmm.CommandText = "select a.xref, a.kod, a.aciklama from firmatanim a ";
+            cmm.CommandText = "select a.xref, a.kod, a.aciklama from renktanim a ";
             da = new myDataAdapter();
             da.SelectCommand = cmm;
-            da.Fill(XdtMain);
+            da.Fill(xdt);
             da.CreateCommand();
+           
             con.Close();
             base.LoadData();
         }
         protected override void ControlConfigure()
         {
-            grdList.DataSource = XdtMain;
+            grdList.DataSource = xdt;
             grdList.Columns[0].HeaderText = "XREF";
             grdList.Columns[0].Visible = false;
             grdList.Columns[1].HeaderText = "KOD";
@@ -62,7 +59,7 @@ namespace OrtakProje.Forms
         }
         protected override bool Validate()
         {
-            foreach (DataRow r in XdtMain.Select("", "", DataViewRowState.CurrentRows))
+            foreach (DataRow r in xdt.Select("", "", DataViewRowState.CurrentRows))
             {
                 if (helperClass.GetString(r, "kod", "").Trim() == "")
                 {
@@ -72,14 +69,13 @@ namespace OrtakProje.Forms
             }
             return base.Validate();
         }
-
         protected override void SaveData()
         {
             con.Open();
             SqlTransaction trans = con.BeginTransaction();
             try
             {
-                da.Update(XdtMain, trans);
+                da.Update(xdt, trans);
                 trans.Commit();
             }
             catch (Exception ex)
@@ -93,37 +89,22 @@ namespace OrtakProje.Forms
                 con.Close();
             }
         }
-
         protected override void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)
         {
             if (e.Action == DataRowAction.Add)
             {
                 if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
-                    e.Row["xref"] = helperClass.GetId("firmatanim");
+                    e.Row["xref"] = helperClass.GetId("renktanim");
 
             }
 
         }
-
-
-
         #endregion
-
-        #region Private Methods
-        #endregion
-
-        #region Public Methods
-        #endregion
-
-        #region Events
-        #endregion
-
-        #region Nested
-        #endregion
-
-        private void frmTanimFirma_Load(object sender, EventArgs e)
+        private void frmRenkTanim_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace OrtakProje.BaseForm
 {
-    partial class frmBaseTanim
+    partial class FormBaseTanim
     {
         /// <summary>
         /// Required designer variable.

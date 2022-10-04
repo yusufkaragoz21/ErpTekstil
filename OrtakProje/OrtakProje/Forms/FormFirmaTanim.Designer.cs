@@ -1,6 +1,6 @@
 ﻿namespace OrtakProje.Forms
 {
-    partial class frmFirmaTanim
+    partial class FormFirmaTanim
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xdt)).BeginInit();
             this.SuspendLayout();
             // 
             // frmTanimFirma
@@ -39,7 +39,7 @@
             this.Name = "frmTanimFirma";
             this.Text = "Firma Tanımları";
             this.Load += new System.EventHandler(this.frmTanimFirma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xdt)).EndInit();
             this.ResumeLayout(false);
 
         }
