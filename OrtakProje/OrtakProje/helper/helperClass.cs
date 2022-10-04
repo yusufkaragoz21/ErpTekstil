@@ -12,35 +12,44 @@ namespace OrtakProje.Helpers
     {
         public static int GetId(string tablename)
         {
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-8HOREQD2;Initial Catalog=textileproject;Integrated Security=True");
 
             SqlCommand cmm = new SqlCommand();
-                       con.Open();
+           
+          
+            con.Open();
             cmm.Connection = con;
-            cmm.CommandText = "select xref from referances where tablename= @tablename";
+            cmm.CommandText = "select prcref from referances where tablename= @tablename";
             cmm.Parameters.Add("@tablename", SqlDbType.VarChar ).Value = tablename;        
             cmm.Connection = con;
 
             var id = cmm.ExecuteScalar();
             if (id == null) id = -1;
 
-            int xref = Convert.ToInt32(id);
+            int prcref = Convert.ToInt32(id);
 
-            if (xref == -1)
+            if (prcref == -1)
             {
-                xref = 1;
-                cmm.CommandText = "insert into referances(xref, tablename) values(@xref, @tablename)";
-                cmm.Parameters.Add("@xref", SqlDbType.Int, 20).Value = xref;
+                prcref = 1;
+                cmm.CommandText = "insert into referances(prcref, tablename) values(@prcref, @tablename)";
+                cmm.Parameters.Add("@prcref", SqlDbType.Int, 20).Value = prcref;
+                //cmm.Parameters.Add("@tablename", SqlDbType.NVarChar, 200).Value = tablename;
+                
+             
             }
             else
             {
-                xref += 1;
-                cmm.CommandText = "update referances set xref=@xref where tablename = @tablename ";
-                cmm.Parameters.Add("@xref", SqlDbType.Int, 20).Value = xref;            
+                prcref += 1;
+                cmm.CommandText = "update referances set prcref=@prcref where tablename = @tablename ";
+                //cmm.Parameters.Add("@tablename", SqlDbType.NVarChar, 200).Value = tablename;
+                cmm.Parameters.Add("@prcref", SqlDbType.Int, 20).Value = prcref;
+            
+                
             }
+
             cmm.ExecuteNonQuery();
             con.Close();
-            return xref;
+            return prcref;
         }
 
         public static void DataAdapterSetTransaction(SqlDataAdapter da, SqlTransaction trans)

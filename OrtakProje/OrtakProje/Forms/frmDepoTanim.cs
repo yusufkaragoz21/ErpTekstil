@@ -13,19 +13,18 @@ using System.Windows.Forms;
 
 namespace OrtakProje.Forms
 {
-    public partial class frmRenkTanim : BaseForm.frmBaseTanim
+    public partial class frmDepoTanim : BaseForm.frmBaseTanim
     {
-       
-
       
 
         #region Objects
+        //SqlDataAdapter da = null;
         SqlConnection con = null;
         myDataAdapter da = null;
         #endregion
 
         #region Constructor
-        public frmRenkTanim()
+        public frmDepoTanim()
         {
             grdList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             XdtMain.Columns.Add(new DataColumn("xref", typeof(int)));
@@ -33,6 +32,9 @@ namespace OrtakProje.Forms
             XdtMain.Columns.Add(new DataColumn("aciklama", typeof(string)));
             InitializeComponent();
         }
+        #endregion
+
+        #region Properties
         #endregion
 
         #region Overridden
@@ -43,7 +45,7 @@ namespace OrtakProje.Forms
             con.Open();
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = con;
-            cmm.CommandText = "select a.xref, a.kod, a.aciklama from renktanim a ";
+            cmm.CommandText = "select a.xref, a.kod, a.aciklama from depotanim a ";
             da = new myDataAdapter();
             da.SelectCommand = cmm;
             da.Fill(XdtMain);
@@ -68,6 +70,7 @@ namespace OrtakProje.Forms
             }
             return base.Validate();
         }
+
         protected override void SaveData()
         {
             con.Open();
@@ -88,22 +91,17 @@ namespace OrtakProje.Forms
                 con.Close();
             }
         }
+
         protected override void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)
         {
             if (e.Action == DataRowAction.Add)
             {
                 if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
-                    e.Row["xref"] = helperClass.GetId("renktanim");
+                    e.Row["xref"] = helperClass.GetId("depotanim");
 
             }
 
         }
-        #endregion
-        private void frmRenkTanim_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
+#endregion

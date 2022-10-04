@@ -1,4 +1,4 @@
-﻿using OrtakProje.helper;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +10,7 @@ namespace OrtakProje.Classes
 {
     internal class stokHareketClass
     {
-        SqlConnection conn=DBAddress.GetDBConnection();
+        
         
         public void Init()
         {
@@ -22,8 +22,7 @@ namespace OrtakProje.Classes
         }
         public Result Validate() 
         {
-            conn.Open();
-            conn.Close();
+          
             return null; 
         }
         public Result ValidateDelete() 

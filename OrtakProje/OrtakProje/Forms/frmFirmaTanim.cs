@@ -24,6 +24,10 @@ namespace OrtakProje.Forms
         #region Constructor
         public frmFirmaTanim()
         {
+            grdList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            XdtMain.Columns.Add(new DataColumn("xref", typeof(int)));
+            XdtMain.Columns.Add(new DataColumn("kod", typeof(string)));
+            XdtMain.Columns.Add(new DataColumn("aciklama", typeof(string)));
             InitializeComponent();
         }
         #endregion
@@ -35,7 +39,7 @@ namespace OrtakProje.Forms
         protected override void LoadData()
         {
 
-            con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
+            con = new SqlConnection("Data Source=LAPTOP-8HOREQD2;Initial Catalog=textileproject;Integrated Security=True");
             con.Open();
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = con;
@@ -45,6 +49,10 @@ namespace OrtakProje.Forms
             da.Fill(XdtMain);
             da.CreateCommand();
             grdList.DataSource = XdtMain;
+            grdList.Columns[0].HeaderText = "XREF";
+            grdList.Columns[0].Visible = false;
+            grdList.Columns[1].HeaderText = "KOD";
+            grdList.Columns[2].HeaderText = "AÇIKLAMA";
             con.Close();
             base.LoadData();
         }
