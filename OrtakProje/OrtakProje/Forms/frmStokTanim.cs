@@ -82,9 +82,7 @@ namespace OrtakProje.Forms
                     e.Row["xref"] = helperClass.GetId("stoktanim");
 
             }
-
         }
-
 
         #endregion
 

@@ -28,7 +28,7 @@ namespace OrtakProje.BaseForm
         #region Properties
         #endregion
 
-       
+
 
         #region Private Methods
         protected virtual void LoadData()
@@ -37,8 +37,8 @@ namespace OrtakProje.BaseForm
         }
         protected virtual bool Validate() { return true; }
         protected virtual void SaveData() { }
-       
-       
+
+
         #endregion
 
         #region Public Methods
@@ -48,21 +48,13 @@ namespace OrtakProje.BaseForm
         #region Events
         private void frmBaseTanim_Load(object sender, EventArgs e)
         {
-            XdtMain.RowChanging += XdtMain_RowChanging;
             XdtMain.RowChanged += XdtMain_RowChanged;
-                LoadData();
-
+            LoadData();
         }
 
         protected virtual void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)
         {
-           
-        }
 
-        protected virtual void XdtMain_RowChanging(object sender, DataRowChangeEventArgs e)
-        {
-           
-            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -78,7 +70,6 @@ namespace OrtakProje.BaseForm
             }
         }
 
-
         private void frmBaseTanim_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Değişikler Kaydedilsin mi?", "", MessageBoxButtons.YesNo);
@@ -89,7 +80,6 @@ namespace OrtakProje.BaseForm
                     SaveData();
                 }
             }
-           
         }
 
         #endregion

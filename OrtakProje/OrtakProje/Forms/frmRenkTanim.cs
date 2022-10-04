@@ -73,7 +73,6 @@ namespace OrtakProje.Forms
             {
                 trans.Rollback();
                 MessageBox.Show(ex.Message);
-
             }
             finally
             {
@@ -86,7 +85,6 @@ namespace OrtakProje.Forms
             {
                 if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
                     e.Row["xref"] = helperClass.GetId("renktanim");
-
             }
 
         }
