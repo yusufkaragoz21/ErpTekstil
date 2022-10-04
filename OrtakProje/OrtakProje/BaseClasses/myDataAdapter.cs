@@ -10,9 +10,6 @@ namespace OrtakProje.BaseClasses
 {
     public  class myDataAdapter
     {
-
-
-
         #region Objects
         SqlDataAdapter da = null;
         #endregion

@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using ClassLibrary;
+
 
 namespace OrtakProje.Forms
 {
@@ -19,6 +21,8 @@ namespace OrtakProje.Forms
         #region Objects
         SqlConnection con = null;
         myDataAdapter da = null;
+        //connection conn = new connection();
+
         #endregion
 
         #region Constructor
@@ -38,8 +42,8 @@ namespace OrtakProje.Forms
         #region Overridden
         protected override void LoadData()
         {
-
-
+            //conn.Open();
+        
             con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
             con.Open();
             SqlCommand cmm = new SqlCommand();

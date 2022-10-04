@@ -32,3 +32,6 @@ C:\Users\yalci\OneDrive\Masaüstü\ErpTekstil-main\ErpTekstil-main\OrtakProje\Or
 C:\Users\yalci\OneDrive\Masaüstü\ErpTekstil-main\ErpTekstil-main\OrtakProje\OrtakProje\bin\Debug\OrtakProje.exe.config
 C:\Users\yalci\OneDrive\Masaüstü\ErpTekstil-main\ErpTekstil-main\OrtakProje\OrtakProje\bin\Debug\OrtakProje.exe
 C:\Users\yalci\OneDrive\Masaüstü\ErpTekstil-main\ErpTekstil-main\OrtakProje\OrtakProje\bin\Debug\OrtakProje.pdb
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\bin\Debug\ClassLibrary.dll
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\bin\Debug\ClassLibrary.pdb
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.csproj.CopyComplete

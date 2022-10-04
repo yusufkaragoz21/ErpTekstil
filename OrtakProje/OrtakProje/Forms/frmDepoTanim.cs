@@ -93,13 +93,12 @@ namespace OrtakProje.Forms
 
         protected override void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)
         {
-            if (e.Action == DataRowAction.Add)
-            {
-                if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
-                    e.Row["xref"] = helperClass.GetId("depotanim");
-
-            }
-
+            //if (e.Action != DataRowAction.Add)
+            //{
+            //    return;
+            //}
+            if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
+                e.Row["xref"] = helperClass.GetId("depotanim");
         }
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\obj\Debug\Connection.csproj.AssemblyReference.cache
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\ClassLibrary\obj\Debug\ClassLibrary.pdb
