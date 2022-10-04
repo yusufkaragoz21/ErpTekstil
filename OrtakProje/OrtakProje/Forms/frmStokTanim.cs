@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Connection;
 namespace OrtakProje.Forms
 {
     public partial class frmStokTanim : BaseForm.frmBaseTanim
@@ -18,6 +18,7 @@ namespace OrtakProje.Forms
         #region Objects
         SqlConnection con = null;
         myDataAdapter da = null;
+        connection connection = new connection();
         #endregion
         #region Constructor
         public frmStokTanim()
@@ -32,11 +33,12 @@ namespace OrtakProje.Forms
         #region Overridden
         protected override void LoadData()
         {
-          
-            con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
-            con.Open();
+          connection.Open();
+            //con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
+            //con.Open();
             SqlCommand cmm = new SqlCommand();
-            cmm.Connection = con;
+            //cmm.Connection = con;
+            cmm.Connection = connection.Conobjcet;
             cmm.CommandText = "select a.xref, a.kod, a.aciklama from stoktanim a ";
             da = new myDataAdapter();
             da.SelectCommand = cmm;
@@ -47,7 +49,8 @@ namespace OrtakProje.Forms
             grdList.Columns[0].Visible = false;
             grdList.Columns[1].HeaderText = "KOD";
             grdList.Columns[2].HeaderText = "AÇIKLAMA";
-            con.Close();
+            //con.Close();
+            connection.Close();
             base.LoadData();
         }
         protected override bool Validate()
@@ -64,8 +67,10 @@ namespace OrtakProje.Forms
         }
         protected override void SaveData()
         {
-            con.Open();
-            SqlTransaction trans = con.BeginTransaction();
+            connection.Open();
+            //con.Open();
+            //SqlTransaction trans = con.BeginTransaction();
+            SqlTransaction trans = connection.Conobjcet.BeginTransaction();
             try
             {
                 da.Update(XdtMain, trans);
@@ -79,7 +84,8 @@ namespace OrtakProje.Forms
             }
             finally
             {
-                con.Close();
+                connection.Close();
+                //con.Close();
             }
         }
         protected override void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)

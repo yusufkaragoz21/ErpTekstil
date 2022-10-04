@@ -40,7 +40,7 @@ namespace OrtakProje.Helpers
             else
             {
                 xref += 1;
-                cmm.CommandText = "update referances set xref=@prcref where tablename = @tablename ";
+                cmm.CommandText = "update referances set xref=@xref where tablename = @tablename ";
                 //cmm.Parameters.Add("@tablename", SqlDbType.NVarChar, 200).Value = tablename;
                 cmm.Parameters.Add("@xref", SqlDbType.Int, 20).Value = xref;
             

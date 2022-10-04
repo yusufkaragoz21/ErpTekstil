@@ -4,9 +4,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary;
+using Connection;
 
-namespace ClassLibrary
+
+namespace Connection
 {
     public class connection
     {
