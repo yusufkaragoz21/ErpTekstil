@@ -25,10 +25,6 @@ namespace OrtakProje
 
         }
 
-        private void tanımlarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         frmStokTanim frmstoktanim;
         private void mnStokTanim_Click(object sender, EventArgs e)

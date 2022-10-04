@@ -18,7 +18,6 @@ namespace OrtakProje.Forms
       
 
         #region Objects
-        //SqlDataAdapter da = null;
         SqlConnection con = null;
         myDataAdapter da = null;
         #endregion
@@ -26,6 +25,7 @@ namespace OrtakProje.Forms
         #region Constructor
         public frmDepoTanim()
         {
+
             grdList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             XdtMain.Columns.Add(new DataColumn("xref", typeof(int)));
             XdtMain.Columns.Add(new DataColumn("kod", typeof(string)));
@@ -40,8 +40,7 @@ namespace OrtakProje.Forms
         #region Overridden
         protected override void LoadData()
         {
-
-            con = new SqlConnection("Data Source=LAPTOP-8HOREQD2;Initial Catalog=textileproject;Integrated Security=True");
+            con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
             con.Open();
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = con;

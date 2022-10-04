@@ -61,7 +61,6 @@
             this.tanımlarToolStripMenuItem.Name = "tanımlarToolStripMenuItem";
             this.tanımlarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.tanımlarToolStripMenuItem.Text = "Tanımlar";
-            this.tanımlarToolStripMenuItem.Click += new System.EventHandler(this.tanımlarToolStripMenuItem_Click);
             // 
             // mnStokTanim
             // 
