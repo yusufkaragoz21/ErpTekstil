@@ -66,11 +66,23 @@
     <Compile Include="Forms\frmBirimTanim.Designer.cs">
       <DependentUpon>frmBirimTanim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTanimFirma.cs">
+    <Compile Include="Forms\frmFirmaTanim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTanimFirma.Designer.cs">
-      <DependentUpon>frmTanimFirma.cs</DependentUpon>
+    <Compile Include="Forms\frmFirmaTanim.Designer.cs">
+      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRenkTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRenkTanim.Designer.cs">
+      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStokTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStokTanim.Designer.cs">
+      <DependentUpon>frmStokTanim.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -91,8 +103,14 @@
     <EmbeddedResource Include="Forms\frmBirimTanim.resx">
       <DependentUpon>frmBirimTanim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTanimFirma.resx">
-      <DependentUpon>frmTanimFirma.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmFirmaTanim.resx">
+      <DependentUpon>frmFirmaTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRenkTanim.resx">
+      <DependentUpon>frmRenkTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStokTanim.resx">
+      <DependentUpon>frmStokTanim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace OrtakProje.Forms
 {
-    partial class frmFirmaTanim
+    partial class frmStokTanim
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // frmTanimFirma
+            // frmStokTanim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmTanimFirma";
-            this.Text = "Firma Tanımları";
-            this.Load += new System.EventHandler(this.frmTanimFirma_Load);
+            this.Name = "frmStokTanim";
+            this.Text = "frmStokTanim";
+            this.Load += new System.EventHandler(this.frmStokTanim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.XdtMain)).EndInit();
             this.ResumeLayout(false);
 

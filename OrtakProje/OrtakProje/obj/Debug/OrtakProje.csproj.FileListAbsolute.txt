@@ -3,7 +3,6 @@ C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\De
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.BaseForm.frmBaseTanim.resources
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.FormBaseTanim.resources
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.frmBirimTanim.resources
-C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.frmTanimFirma.resources
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Home.resources
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Properties.Resources.resources
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.csproj.GenerateResource.cache
@@ -13,3 +12,6 @@ C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\bin\De
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\bin\Debug\OrtakProje.pdb
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.exe
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.pdb
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.frmFirmaTanim.resources
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.frmRenkTanim.resources
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.Forms.frmStokTanim.resources

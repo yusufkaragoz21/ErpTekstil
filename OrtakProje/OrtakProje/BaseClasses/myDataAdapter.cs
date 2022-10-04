@@ -43,6 +43,7 @@ namespace OrtakProje.BaseClasses
         public void Update(DataTable dt)
         {
             da.Update(dt);
+            dt.AcceptChanges(); 
         }
         public void Update(DataSet ds, string tablename)
         {

@@ -88,7 +88,6 @@ namespace OrtakProje.BaseForm
                 {
                     SaveData();
                 }
-
             }
            
         }

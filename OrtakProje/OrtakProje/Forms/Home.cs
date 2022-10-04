@@ -37,5 +37,21 @@ namespace OrtakProje
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void stokTanımlarıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStokTanim frm = new frmStokTanim();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void renkTanımlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRenkTanim frm = new frmRenkTanim();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

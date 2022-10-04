@@ -13,22 +13,22 @@ using System.Windows.Forms;
 
 namespace OrtakProje.Forms
 {
-    public partial class frmFirmaTanim : BaseForm.frmBaseTanim
+    public partial class frmRenkTanim : BaseForm.frmBaseTanim
     {
+       
+
+      
+
         #region Objects
-        //SqlDataAdapter da = null;
         SqlConnection con = null;
         myDataAdapter da = null;
         #endregion
 
         #region Constructor
-        public frmFirmaTanim()
+        public frmRenkTanim()
         {
             InitializeComponent();
         }
-        #endregion
-
-        #region Properties
         #endregion
 
         #region Overridden
@@ -39,7 +39,7 @@ namespace OrtakProje.Forms
             con.Open();
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = con;
-            cmm.CommandText = "select a.xref, a.kod, a.aciklama from firmatanim a ";
+            cmm.CommandText = "select a.xref, a.kod, a.aciklama from renktanim a ";
             da = new myDataAdapter();
             da.SelectCommand = cmm;
             da.Fill(XdtMain);
@@ -60,7 +60,6 @@ namespace OrtakProje.Forms
             }
             return base.Validate();
         }
-
         protected override void SaveData()
         {
             con.Open();
@@ -81,37 +80,22 @@ namespace OrtakProje.Forms
                 con.Close();
             }
         }
-
         protected override void XdtMain_RowChanged(object sender, DataRowChangeEventArgs e)
         {
             if (e.Action == DataRowAction.Add)
             {
                 if (e.Row["xref"] == DBNull.Value || e.Row["xref"] == null)
-                    e.Row["xref"] = helperClass.GetId("firmatanim");
+                    e.Row["xref"] = helperClass.GetId("renktanim");
 
             }
 
         }
-
-
-
         #endregion
-
-        #region Private Methods
-        #endregion
-
-        #region Public Methods
-        #endregion
-
-        #region Events
-        #endregion
-
-        #region Nested
-        #endregion
-
-        private void frmTanimFirma_Load(object sender, EventArgs e)
+        private void frmRenkTanim_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

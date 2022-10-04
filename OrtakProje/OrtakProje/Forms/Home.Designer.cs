@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tanımlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnFirmaTanim = new System.Windows.Forms.ToolStripMenuItem();
+            this.stokTanımlarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.renkTanımlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,9 @@
             // tanımlarToolStripMenuItem
             // 
             this.tanımlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnFirmaTanim});
+            this.mnFirmaTanim,
+            this.stokTanımlarıToolStripMenuItem,
+            this.renkTanımlarToolStripMenuItem});
             this.tanımlarToolStripMenuItem.Name = "tanımlarToolStripMenuItem";
             this.tanımlarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.tanımlarToolStripMenuItem.Text = "Tanımlar";
@@ -59,6 +63,20 @@
             this.mnFirmaTanim.Size = new System.Drawing.Size(180, 22);
             this.mnFirmaTanim.Text = "Firma Tanımları";
             this.mnFirmaTanim.Click += new System.EventHandler(this.mnFirmaTanim_Click);
+            // 
+            // stokTanımlarıToolStripMenuItem
+            // 
+            this.stokTanımlarıToolStripMenuItem.Name = "stokTanımlarıToolStripMenuItem";
+            this.stokTanımlarıToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stokTanımlarıToolStripMenuItem.Text = "Stok Tanımlar";
+            this.stokTanımlarıToolStripMenuItem.Click += new System.EventHandler(this.stokTanımlarıToolStripMenuItem_Click);
+            // 
+            // renkTanımlarToolStripMenuItem
+            // 
+            this.renkTanımlarToolStripMenuItem.Name = "renkTanımlarToolStripMenuItem";
+            this.renkTanımlarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.renkTanımlarToolStripMenuItem.Text = "Renk Tanımlar";
+            this.renkTanımlarToolStripMenuItem.Click += new System.EventHandler(this.renkTanımlarToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -84,6 +102,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tanımlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnFirmaTanim;
+        private System.Windows.Forms.ToolStripMenuItem stokTanımlarıToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem renkTanımlarToolStripMenuItem;
     }
 }
 
