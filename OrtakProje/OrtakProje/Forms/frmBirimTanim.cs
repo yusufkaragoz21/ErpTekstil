@@ -17,7 +17,7 @@ namespace OrtakProje.Forms
 {
     public partial class frmBirimTanim : BaseForm.frmBaseTanim
     {
-        
+
         #region Objects
         SqlConnection con = null;
         myDataAdapter da = null;
@@ -43,7 +43,7 @@ namespace OrtakProje.Forms
         protected override void LoadData()
         {
             //conn.Open();
-        
+
             con = new SqlConnection("Data Source=.;Initial Catalog=gamateks;Integrated Security=True");
             con.Open();
             SqlCommand cmm = new SqlCommand();
@@ -53,13 +53,17 @@ namespace OrtakProje.Forms
             da.SelectCommand = cmm;
             da.Fill(XdtMain);
             da.CreateCommand();
-            grdList.DataSource = XdtMain;
-            grdList.Columns[0].HeaderText = "XREF";
-            grdList.Columns[0].Visible= false;
-            grdList.Columns[1].HeaderText = "KOD";
-            grdList.Columns[2].HeaderText = "AÇIKLAMA";
             con.Close();
             base.LoadData();
+        }
+        protected override void ControlConfigure()
+        {
+            grdList.DataSource = XdtMain;
+            grdList.Columns[0].HeaderText = "XREF";
+            grdList.Columns[0].Visible = false;
+            grdList.Columns[1].HeaderText = "KOD";
+            grdList.Columns[2].HeaderText = "AÇIKLAMA";
+            base.ControlConfigure();
         }
         protected override bool Validate()
         {

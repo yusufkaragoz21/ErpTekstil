@@ -42,6 +42,10 @@ namespace OrtakProje.BaseForm
         #endregion
 
         #region Public Methods
+        protected virtual void ControlConfigure()
+        {
+
+        }
 
         #endregion
 
@@ -50,6 +54,7 @@ namespace OrtakProje.BaseForm
         {
             XdtMain.RowChanging += XdtMain_RowChanging;
             XdtMain.RowChanged += XdtMain_RowChanged;
+            ControlConfigure();
                 LoadData();
 
         }

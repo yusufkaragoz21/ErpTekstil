@@ -44,11 +44,7 @@ namespace OrtakProje.Forms
             da.SelectCommand = cmm;
             da.Fill(XdtMain);
             da.CreateCommand();
-            grdList.DataSource = XdtMain;
-            grdList.Columns[0].HeaderText = "XREF";
-            grdList.Columns[0].Visible = false;
-            grdList.Columns[1].HeaderText = "KOD";
-            grdList.Columns[2].HeaderText = "AÇIKLAMA";
+          
             //con.Close();
             connection.Close();
             base.LoadData();
@@ -64,6 +60,15 @@ namespace OrtakProje.Forms
                 }
             }
             return base.Validate();
+        }
+        protected override void ControlConfigure()
+        {
+            grdList.DataSource = XdtMain;
+            grdList.Columns[0].HeaderText = "XREF";
+            grdList.Columns[0].Visible = false;
+            grdList.Columns[1].HeaderText = "KOD";
+            grdList.Columns[2].HeaderText = "AÇIKLAMA";
+            base.ControlConfigure();
         }
         protected override void SaveData()
         {

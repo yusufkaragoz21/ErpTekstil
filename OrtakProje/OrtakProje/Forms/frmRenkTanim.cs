@@ -48,13 +48,18 @@ namespace OrtakProje.Forms
             da.SelectCommand = cmm;
             da.Fill(XdtMain);
             da.CreateCommand();
+           
+            con.Close();
+            base.LoadData();
+        }
+        protected override void ControlConfigure()
+        {
             grdList.DataSource = XdtMain;
             grdList.Columns[0].HeaderText = "XREF";
             grdList.Columns[0].Visible = false;
             grdList.Columns[1].HeaderText = "KOD";
             grdList.Columns[2].HeaderText = "AÇIKLAMA";
-            con.Close();
-            base.LoadData();
+            base.ControlConfigure();
         }
         protected override bool Validate()
         {
