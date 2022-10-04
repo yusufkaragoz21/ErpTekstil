@@ -32,7 +32,7 @@ namespace OrtakProje
 
         private void mnFirmaTanim_Click(object sender, EventArgs e)
         {
-            frmTanimFirma frm = new frmTanimFirma();
+            frmFirmaTanim frm = new frmFirmaTanim();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
