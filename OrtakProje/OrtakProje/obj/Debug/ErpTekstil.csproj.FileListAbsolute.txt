@@ -17,3 +17,4 @@ C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\De
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\ErpTekstil.csproj.CopyComplete
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.exe
 C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\obj\Debug\OrtakProje.pdb
+C:\Users\yusuf\OneDrive\Documents\GitHub\ErpTekstil\OrtakProje\OrtakProje\bin\Debug\ClassLibrary.dll
